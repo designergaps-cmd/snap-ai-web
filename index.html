@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNAP AI | AI Photobooth Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #050505; color: white; scroll-behavior: smooth; overflow-x: hidden; }
+        .hero-glow { background: radial-gradient(circle at 50% -20%, #312e81 0%, #050505 70%); }
+        
+        /* 极致毛玻璃效果 */
+        .glass-nav { 
+            background: rgba(10, 10, 10, 0.4); 
+            backdrop-filter: blur(30px) saturate(180%); 
+            -webkit-backdrop-filter: blur(30px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-dropdown {
+            background: rgba(20, 20, 20, 0.7);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        /* 导航栏滚动交互 */
+        nav { transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s; }
+        .nav-hidden { transform: translateY(-100%); }
+
+        /* 菜单项悬停动画 */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1.5px;
+            bottom: -4px;
+            left: 0;
+            background: linear-gradient(90deg, #bf953f, #fcf6ba);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        /* 渐变字体保持 */
+        @keyframes textGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        .gold-gradient { background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); background-size: 200% auto; -webkit-background-clip: text; color: transparent; animation: textGradient 4s linear infinite; }
+        .purple-gradient { background: linear-gradient(to right, #6366f1, #c084fc, #6366f1); background-size: 200% auto; -webkit-background-clip: text; color: transparent; animation: textGradient 4s linear infinite; }
+
+        /* 下拉菜单 */
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-menu { 
+            opacity: 0; 
+            visibility: hidden; 
+            transform: translateY(15px); 
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1); 
+        }
+
+        /* WhatsApp 动效 */
+        @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); } 70% { box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); } 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); } }
+        .wa-float { animation: pulse-green 2s infinite; }
+    </style>
+</head>
+<body class="hero-glow">
+
+    <nav id="navbar" class="fixed top-0 w-full glass-nav z-[100] px-12 py-5">
+        <div class="max-w-[1400px] mx-auto flex justify-between items-center">
+            
+            <a href="#" class="flex-shrink-0">
+                <img src="snap_logo.png" alt="SNAP" class="h-9 rounded">
+            </a>
+
+            <div class="hidden md:flex gap-14 text-gray-200 text-[13px] font-semibold uppercase tracking-[0.15em] items-center">
+                
+                <div class="relative dropdown">
+                    <a href="#" class="nav-link flex items-center gap-2 hover:text-white">
+                        Services <i class="fa-solid fa-chevron-down text-[9px] opacity-60"></i>
+                    </a>
+                    <div class="dropdown-menu absolute top-full -left-10 pt-5">
+                        <div class="glass-dropdown w-64 p-3 rounded-2xl">
+                            <a href="#" class="group flex items-center justify-between px-4 py-3 hover:bg-white/10 rounded-xl transition">
+                                <span>AI Faceswap Booth</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all"></i>
+                            </a>
+                            <a href="#" class="group flex items-center justify-between px-4 py-3 hover:bg-white/10 rounded-xl transition">
+                                <span>AI Costume Booth</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all"></i>
+                            </a>
+                            <a href="#" class="group flex items-center justify-between px-4 py-3 hover:bg-white/10 rounded-xl transition">
+                                <span>AI Themes Booth</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all"></i>
+                            </a>
+                            <a href="#" class="group flex items-center justify-between px-4 py-3 hover:bg-white/10 rounded-xl transition">
+                                <span>AI Sticker Booth</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all"></i>
+                            </a>
+                            <a href="#" class="group flex items-center justify-between px-4 py-3 hover:bg-white/10 rounded-xl transition">
+                                <span>AI Magnet Booth</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all"></i>
+                            </a>
+                            <a href="#" class="group flex items-center justify-between px-4 py-3 hover:bg-white/10 rounded-xl transition">
+                                <span>AI Cartoon Booth</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#events" class="nav-link hover:text-white">Showcase</a>
+                <a href="#about" class="nav-link hover:text-white">About Us</a>
+                <a href="mailto:hellofunprint@gmail.com" class="nav-link hover:text-white">Contact Us</a>
+            </div>
+
+            <div class="hidden md:block w-24 text-right">
+                <span class="text-[10px] text-white/30 tracking-tighter">Est. 2026</span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="max-w-6xl mx-auto pt-56 pb-20 px-6 text-center">
+        <div class="inline-block px-4 py-1 border border-indigo-500/30 rounded-full text-indigo-400 text-[11px] font-bold mb-8 tracking-widest uppercase">
+            AI Photography Excellence
+        </div>
+        
+        <h1 class="text-7xl md:text-9xl font-black tracking-tighter mb-4 leading-none uppercase">
+            <span class="gold-gradient">Unleash The</span> <br>
+            <span class="purple-gradient">Legend.</span>
+        </h1>
+        
+        <p class="text-indigo-300 text-xs md:text-sm font-bold tracking-[0.4em] uppercase mb-12 opacity-80 animate-pulse">
+            More than 100 templates & styles
+        </p>
+
+        <div class="bento-card max-w-5xl mx-auto relative group">
+            <img id="main-template-img" src="akira drive.jpg" class="w-full aspect-video object-cover transition duration-700">
+            <div class="absolute bottom-6 left-6 text-left bg-black/60 backdrop-blur-md p-5 rounded-2xl border border-white/20">
+                <p id="template-subtitle" class="text-[10px] font-bold text-indigo-400 tracking-widest uppercase">Series 01</p>
+                <h3 id="template-title" class="text-xl font-bold text-white">Cyberpunk Vibe</h3>
+            </div>
+            <button onclick="prevTemplate()" class="absolute left-6 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-white hover:text-black border border-white/10 text-white rounded-full p-4 transition opacity-0 group-hover:opacity-100">&larr;</button>
+            <button onclick="nextTemplate()" class="absolute right-6 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-white hover:text-black border border-white/10 text-white rounded-full p-4 transition opacity-0 group-hover:opacity-100">&rarr;</button>
+        </div>
+    </section>
+
+    <section id="events" class="max-w-7xl mx-auto px-6 py-32">
+        <div class="flex flex-col items-center mb-16">
+            <h2 class="text-indigo-400 font-bold tracking-widest uppercase text-xs mb-3">Featured Showcase</h2>
+            <h3 class="text-5xl font-bold">2026 MattLam CNY Event</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="md:col-span-2 bento-card gold-border relative">
+                <img src="mattlam final.jpg" class="w-full h-[540px] object-cover">
+                <div class="p-10 absolute bottom-0 bg-gradient-to-t from-black via-black/40 to-transparent w-full text-left">
+                    <span class="bg-yellow-500 text-black text-[10px] font-black px-2 py-1 rounded mb-4 inline-block tracking-tighter">FEATURED ARTIST</span>
+                    <h4 class="text-3xl font-bold">Matt Lam</h4>
+                </div>
+            </div>
+            <div class="space-y-6 md:col-span-1">
+                <div class="bento-card h-[258px]"><img src="lady chaishen.jpg" class="w-full h-full object-cover hover:scale-110 transition duration-700"></div>
+                <div class="bento-card h-[258px]"><img src="man caishenye.jpg" class="w-full h-full object-cover hover:scale-110 transition duration-700"></div>
+            </div>
+            <div class="space-y-6 md:col-span-1">
+                <div class="bento-card h-[258px]"><img src="mattlam style girl.jpg" class="w-full h-full object-cover hover:scale-110 transition duration-700"></div>
+                <div class="bento-card bg-indigo-900/40 flex flex-col items-center justify-center p-8 text-center h-[258px] border-indigo-500/30">
+                    <p class="font-bold text-xl leading-tight">Elevating Events <br>with AI Vision</p>
+                    <div class="mt-6 w-12 h-1 bg-indigo-500/50 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="max-w-5xl mx-auto px-6 py-32">
+        <div class="glass-dropdown p-16 rounded-[4rem] text-center relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div>
+            <h2 class="text-4xl font-black mb-10 gold-gradient inline-block">THE SNAP STORY</h2>
+            <div class="text-gray-300 text-xl leading-relaxed space-y-8 max-w-3xl mx-auto">
+                <p>
+                    Launched in <span class="text-white font-bold">2026</span>, SNAP is redefining the intersection of technology and celebration. We empower global brands by merging high-end aesthetics with cutting-edge <span class="text-indigo-400">AI generation</span>.
+                </p>
+                <p>
+                    From elite <strong>Weddings</strong> and <strong>Corporate Galas (D&D)</strong> to <strong>Brand Activations</strong> and <strong>Private VIP Parties</strong>, we craft bespoke AI Photobooth experiences that aren't just photos—they are legends.
+                </p>
+                <p class="text-2xl font-bold text-white pt-6">
+                    Let's create something legendary together.
+                </p>
+                <a href="mailto:hellofunprint@gmail.com" class="inline-flex items-center gap-3 mt-4 px-10 py-4 bg-white text-black font-black rounded-full hover:bg-indigo-600 hover:text-white transition-all duration-300 uppercase tracking-widest text-xs">
+                    Get In Touch <i class="fa-solid fa-paper-plane"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/6586934657" target="_blank" class="fixed bottom-10 right-10 z-[100] group">
+        <div class="wa-float glass-dropdown flex items-center gap-4 p-4 px-6 rounded-full bg-green-500/10 border-green-500/30 hover:bg-green-500 transition-all duration-500">
+            <i class="fa-brands fa-whatsapp text-3xl text-green-400 group-hover:text-white"></i>
+            <span class="text-white font-bold text-sm tracking-wide">WhatsApp Support</span>
+        </div>
+    </a>
+
+    <script>
+        // 导航栏滚动逻辑
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop && scrollTop > 150) {
+                navbar.classList.add('nav-hidden');
+            } else {
+                navbar.classList.remove('nav-hidden');
+            }
+            lastScrollTop = scrollTop;
+            
+            // 滚动时增加背景深度
+            if (scrollTop > 50) {
+                navbar.style.background = 'rgba(5, 5, 5, 0.7)';
+            } else {
+                navbar.style.background = 'rgba(10, 10, 10, 0.4)';
+            }
+        });
+
+        // 轮播逻辑
+        const templates = [
+            { img: "akira drive.jpg", title: "Cyberpunk Vibe", subtitle: "Series 01" },
+            { img: "astronaut man.jpg", title: "Space Explorer", subtitle: "Series 02" },
+            { img: "basketball.jpg", title: "Hyper Motion", subtitle: "Series 03" }
+        ];
+        let currentIndex = 0;
+        let autoPlayTimer;
+
+        function updateTemplate() {
+            const img = document.getElementById('main-template-img');
+            img.style.opacity = '0';
+            setTimeout(() => {
+                img.src = templates[currentIndex].img;
+                document.getElementById('template-title').innerText = templates[currentIndex].title;
+                document.getElementById('template-subtitle').innerText = templates[currentIndex].subtitle;
+                img.style.opacity = '1';
+            }, 300);
+        }
+
+        function startAutoPlay() { autoPlayTimer = setInterval(nextTemplateOnly, 5000); }
+        function resetAutoPlay() { clearInterval(autoPlayTimer); startAutoPlay(); }
+        function nextTemplateOnly() { currentIndex = (currentIndex + 1) % templates.length; updateTemplate(); }
+        function nextTemplate() { nextTemplateOnly(); resetAutoPlay(); }
+        function prevTemplate() { currentIndex = (currentIndex - 1 + templates.length) % templates.length; updateTemplate(); resetAutoPlay(); }
+
+        startAutoPlay();
+    </script>
+</body>
+</html>
