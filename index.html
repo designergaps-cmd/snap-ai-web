@@ -21,8 +21,8 @@
 
         /* 下拉菜单磨砂 */
         .glass-dropdown {
-            background: rgba(15, 15, 15, 0.9);
-            backdrop-filter: blur(15px);
+            background: rgba(15, 15, 15, 0.95);
+            backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
@@ -30,12 +30,11 @@
         nav { transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         .nav-hidden { transform: translateY(-100%); }
 
-        /* 渐变字体保持 */
+        /* 渐变字体 */
         @keyframes textGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
         .gold-gradient { background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); background-size: 200% auto; -webkit-background-clip: text; color: transparent; animation: textGradient 4s linear infinite; }
         .purple-gradient { background: linear-gradient(to right, #6366f1, #c084fc, #6366f1); background-size: 200% auto; -webkit-background-clip: text; color: transparent; animation: textGradient 4s linear infinite; }
 
-        /* 菜单项点击效果 */
         .nav-link { position: relative; white-space: nowrap; }
         
         /* 下拉菜单动画 */
@@ -47,6 +46,8 @@
         }
 
         .bento-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; overflow: hidden; }
+        
+        /* WhatsApp 动效 */
         .wa-float { animation: pulse-green 2s infinite; }
         @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); } 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); } }
     </style>
@@ -54,31 +55,31 @@
 <body class="hero-glow">
 
     <nav id="navbar" class="fixed top-0 w-full glass-nav z-[100]">
-        <div class="max-w-[1400px] mx-auto px-4 py-3 md:py-5 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-0">
+        <div class="max-w-[1400px] mx-auto px-4 py-3 md:py-5 flex flex-col md:flex-row items-center justify-between gap-2 md:gap-0">
             
             <a href="#" class="flex-shrink-0">
                 <img src="snap_logo.png" alt="SNAP" class="h-6 md:h-9 rounded">
             </a>
 
-            <div class="flex gap-5 md:gap-12 lg:gap-16 text-gray-200 text-[10px] md:text-[13px] font-bold uppercase tracking-wider md:tracking-[0.15em] items-center">
+            <div class="flex gap-4 md:gap-12 lg:gap-16 text-gray-200 text-[10px] md:text-[13px] font-bold uppercase tracking-wider md:tracking-[0.15em] items-center">
                 
                 <div class="relative dropdown">
-                    <a href="#" class="nav-link flex items-center gap-1 hover:text-white">Services <i class="fa-solid fa-chevron-down text-[8px] opacity-50"></i></a>
-                    <div class="dropdown-menu absolute top-full -left-10 md:left-0 pt-4 z-[110]">
+                    <a href="#" class="nav-link flex items-center gap-1 hover:text-white py-1">Services <i class="fa-solid fa-chevron-down text-[8px] opacity-50"></i></a>
+                    <div class="dropdown-menu absolute top-full -left-6 md:left-0 pt-4 z-[110]">
                         <div class="glass-dropdown w-48 md:w-64 p-2 md:p-3 rounded-xl md:rounded-2xl shadow-2xl">
-                            <a href="#" class="block px-3 py-2 md:px-4 md:py-3 hover:bg-white/10 rounded-lg text-[9px] md:text-xs transition">AI Faceswap Booth</a>
-                            <a href="#" class="block px-3 py-2 md:px-4 md:py-3 hover:bg-white/10 rounded-lg text-[9px] md:text-xs transition">AI Costume Booth</a>
-                            <a href="#" class="block px-3 py-2 md:px-4 md:py-3 hover:bg-white/10 rounded-lg text-[9px] md:text-xs transition">AI Themes Booth</a>
-                            <a href="#" class="block px-3 py-2 md:px-4 md:py-3 hover:bg-white/10 rounded-lg text-[9px] md:text-xs transition">AI Sticker Booth</a>
-                            <a href="#" class="block px-3 py-2 md:px-4 md:py-3 hover:bg-white/10 rounded-lg text-[9px] md:text-xs transition">AI Magnet Booth</a>
-                            <a href="#" class="block px-3 py-2 md:px-4 md:py-3 hover:bg-white/10 rounded-lg text-[9px] md:text-xs transition">AI Cartoon Booth</a>
+                            <a href="#" class="block px-3 py-2.5 md:px-4 md:py-3 hover:bg-white/10 rounded-lg text-[9px] md:text-xs transition">AI Faceswap Booth</a>
+                            <a href="#" class="block px-3 py-2.5 md:px-4 md:py-3 hover:bg-white/10 rounded-lg text-[9px] md:text-xs transition">AI Costume Booth</a>
+                            <a href="#" class="block px-3 py-2.5 md:px-4 md:py-3 hover:bg-white/10 rounded-lg text-[9px] md:text-xs transition">AI Themes Booth</a>
+                            <a href="#" class="block px-3 py-2.5 md:px-4 md:py-3 hover:bg-white/10 rounded-lg text-[9px] md:text-xs transition">AI Sticker Booth</a>
+                            <a href="#" class="block px-3 py-2.5 md:px-4 md:py-3 hover:bg-white/10 rounded-lg text-[9px] md:text-xs transition">AI Magnet Booth</a>
+                            <a href="#" class="block px-3 py-2.5 md:px-4 md:py-3 hover:bg-white/10 rounded-lg text-[9px] md:text-xs transition">AI Cartoon Booth</a>
                         </div>
                     </div>
                 </div>
                 
-                <a href="#events" class="nav-link hover:text-white">Showcase</a>
-                <a href="#about" class="nav-link hover:text-white">About Us</a>
-                <a href="mailto:hellofunprint@gmail.com" class="nav-link hover:text-white">Contact</a>
+                <a href="#events" class="nav-link hover:text-white py-1">Showcase</a>
+                <a href="#about" class="nav-link hover:text-white py-1">About Us</a>
+                <a href="mailto:hellofunprint@gmail.com" class="nav-link hover:text-white py-1">Contact</a>
             </div>
 
             <div class="hidden md:block w-24 text-right">
@@ -123,14 +124,14 @@
                 <img src="mattlam final.jpg" class="w-full h-[300px] md:h-[540px] object-cover transition duration-700 group-hover:scale-105">
                 <div class="p-6 md:p-10 absolute bottom-0 bg-gradient-to-t from-black w-full text-left">
                     <span class="bg-yellow-500 text-black text-[9px] font-black px-2 py-1 rounded mb-4 inline-block">FEATURED</span>
-                    <h4 class="text-xl md:text-3xl font-bold">Matt Lam</h4>
+                    <h4 class="text-xl md:text-3xl font-bold text-white">Matt Lam</h4>
                 </div>
             </div>
             <div class="col-span-1 bento-card h-[180px] md:h-[258px]"><img src="lady chaishen.jpg" class="w-full h-full object-cover"></div>
             <div class="col-span-1 bento-card h-[180px] md:h-[258px]"><img src="man caishenye.jpg" class="w-full h-full object-cover"></div>
             <div class="col-span-1 bento-card h-[180px] md:h-[258px]"><img src="mattlam style girl.jpg" class="w-full h-full object-cover"></div>
             <div class="col-span-1 bento-card bg-indigo-900/40 flex flex-col items-center justify-center p-4 text-center h-[180px] md:h-[258px]">
-                <p class="font-bold text-sm md:text-xl leading-tight">Elevating Events with AI</p>
+                <p class="font-bold text-sm md:text-xl leading-tight text-white">Elevating Events with AI</p>
             </div>
         </div>
     </section>
@@ -146,8 +147,8 @@
         </div>
     </section>
 
-    <a href="https://wa.me/6586934657" target="_blank" class="fixed bottom-6 right-6 z-[100] group">
-        <div class="wa-float glass-dropdown flex items-center gap-2 p-3 px-4 rounded-full bg-green-500/10 border-green-500/30">
+    <a href="https://wa.me/6598631242" target="_blank" class="fixed bottom-6 right-6 z-[100] group">
+        <div class="wa-float glass-dropdown flex items-center gap-2 p-3 px-4 rounded-full bg-green-500/20 border-green-500/40 hover:bg-green-500 transition-all duration-300">
             <i class="fa-brands fa-whatsapp text-xl md:text-2xl text-green-400"></i>
             <span class="text-white font-bold text-[10px] md:text-sm">WhatsApp</span>
         </div>
@@ -159,7 +160,6 @@
 
         window.addEventListener('scroll', () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            // 向上滚动时显示，向下滚动超过 100 像素时隐藏
             if (scrollTop > lastScrollTop && scrollTop > 100) {
                 navbar.classList.add('nav-hidden');
             } else {
