@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About SNAP | Our Story</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #050505; color: white; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+        .hero-glow { background: radial-gradient(circle at 50% 30%, #1e1b4b 0%, #050505 70%); min-height: 100vh; }
+        
+        .glass-nav { 
+            background: rgba(8, 8, 8, 0.7); 
+            backdrop-filter: blur(20px) saturate(180%); 
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06); 
+        }
+        
+        .glass-card { 
+            background: rgba(255, 255, 255, 0.02); 
+            backdrop-filter: blur(15px); 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+        }
+        
+        @keyframes goldFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .gold-animate {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: goldFlow 5s linear infinite;
+            display: inline-block;
+        }
+
+        /* 按钮悬停变金色 */
+        .btn-gold-hover {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            background: white;
+            color: black;
+        }
+        .btn-gold-hover:hover {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            background-size: 200% auto;
+            animation: goldFlow 3s linear infinite;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(191, 149, 63, 0.4);
+        }
+
+        .fade-in-up { 
+            animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1) forwards; 
+            opacity: 0; 
+        }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .gold-dot { 
+            width: 7px; height: 7px; background: #bf953f; border-radius: 50%; display: inline-block; margin-right: 14px; box-shadow: 0 0 10px #bf953f; 
+        }
+    </style>
+</head>
+<body class="hero-glow">
+
+    <nav class="fixed top-0 w-full glass-nav z-[100] px-6 py-4 md:py-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="hover:opacity-80 transition">
+                <img src="snap_logo.png" alt="SNAP" class="h-7 md:h-8 rounded">
+            </a>
+            <a href="index.html" class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-white transition flex items-center gap-2.5">
+                <i class="fa-solid fa-arrow-left text-[8px]"></i> Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto pt-40 md:pt-48 pb-24 px-6">
+        <div class="fade-in-up">
+            
+            <div class="mb-12 md:mb-16 py-12 overflow-visible">
+                <h2 class="text-indigo-400 font-bold tracking-[0.4em] uppercase text-[10px] md:text-xs mb-8">Established 2026</h2>
+                
+                <h1 class="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter uppercase block overflow-visible leading-[1.2]" style="min-height: 1.5em;">
+                    <span class="inline-block py-4">THE <span class="gold-animate italic">SNAP</span></span> <br> 
+                    <span class="inline-block py-4">STORY.</span>
+                </h1>
+            </div>
+
+            <div class="glass-card p-8 md:p-20 rounded-[2.5rem] md:rounded-[4rem] relative overflow-hidden group border-white/5">
+                <div class="absolute -top-10 -right-10 w-72 h-72 bg-indigo-600/5 rounded-full blur-[110px]"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 relative z-10">
+                    <div class="flex flex-col gap-6">
+                        <h3 class="text-[#bf953f] font-bold uppercase tracking-[0.2em] text-lg">Our Mission</h3>
+                        <p class="text-white text-xl md:text-2xl font-medium leading-snug">
+                            SNAP is at the forefront of experiential marketing, dedicated to empowering brands through cutting-edge AI technology while ensuring everyone experiences the pure joy of innovation.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col gap-6">
+                        <h3 class="text-[#bf953f] font-bold uppercase tracking-[0.2em] text-lg">Our Expertise</h3>
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            From high-end Weddings and Corporate D&D to Commercial Activations and Private Birthday Bashes, we specialize in crafting bespoke AI photobooth experiences tailored perfectly to your event's theme.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w-full h-px bg-white/10 my-16 md:my-20 shadow-sm"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="flex items-center text-sm font-semibold tracking-wide text-gray-300">
+                        <span class="gold-dot"></span> AI Faceswap Booths
+                    </div>
+                    <div class="flex items-center text-sm font-semibold tracking-wide text-gray-300">
+                        <span class="gold-dot"></span> Interactive Themes
+                    </div>
+                    <div class="flex items-center text-sm font-semibold tracking-wide text-gray-300">
+                        <span class="gold-dot"></span> Corporate Branding
+                    </div>
+                    <div class="flex items-center text-sm font-semibold tracking-wide text-gray-300">
+                        <span class="gold-dot"></span> Instant AI Printing
+                    </div>
+                </div>
+
+                <div class="mt-24 text-center border-t border-white/5 pt-16 flex flex-col items-center gap-12">
+                    <div class="max-w-3xl mx-auto space-y-4">
+                        <p class="text-2xl md:text-3xl italic font-light text-white/95 tracking-wide">
+                            Bring the future to your celebration.
+                        </p>
+                        <p class="text-2xl md:text-3xl font-bold">
+                            <span class="gold-animate">Let's create something legendary together.</span>
+                        </p>
+                    </div>
+                    <a href="mailto:hellofunprint@gmail.com" class="btn-gold-hover inline-block px-14 py-5 font-black rounded-full uppercase tracking-[0.2em] text-[11px] shadow-2xl transition-all duration-300">
+                        Contact Us Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <a href="https://wa.me/6598631242" target="_blank" class="fixed bottom-8 right-8 z-[100] group">
+        <div class="wa-float flex items-center gap-3.5 p-3.5 px-5 md:p-4 md:px-6 rounded-full bg-black/40 backdrop-blur-xl border border-white/10 hover:border-green-500/50 transition-all duration-500 shadow-2xl">
+            <i class="fa-brands fa-whatsapp text-xl md:text-2xl text-green-400"></i>
+            <span class="text-white font-bold text-xs tracking-wider hidden sm:block">WhatsApp Support</span>
+        </div>
+    </a>
+
+</body>
+</html>
