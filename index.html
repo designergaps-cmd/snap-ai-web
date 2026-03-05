@@ -10,44 +10,16 @@
     <style>
         body { font-family: 'Inter', sans-serif; background: #050505; color: white; scroll-behavior: smooth; overflow-x: hidden; }
         .hero-glow { background: radial-gradient(circle at 50% -10%, #2e2a77 0%, #050505 60%); }
-        
-        /* 极致毛玻璃导航栏 */
-        .glass-nav { 
-            background: rgba(8, 8, 8, 0.6); 
-            backdrop-filter: blur(20px) saturate(180%); 
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        /* 下拉菜单磨砂 */
-        .glass-dropdown {
-            background: rgba(15, 15, 15, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* 导航栏平滑隐藏 */
+        .glass-nav { background: rgba(8, 8, 8, 0.6); backdrop-filter: blur(20px) saturate(180%); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+        .glass-dropdown { background: rgba(15, 15, 15, 0.95); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
         nav { transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         .nav-hidden { transform: translateY(-100%); }
-
-        /* 渐变字体 */
         @keyframes textGradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
         .gold-gradient { background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); background-size: 200% auto; -webkit-background-clip: text; color: transparent; animation: textGradient 4s linear infinite; }
         .purple-gradient { background: linear-gradient(to right, #6366f1, #c084fc, #6366f1); background-size: 200% auto; -webkit-background-clip: text; color: transparent; animation: textGradient 4s linear infinite; }
-
-        .nav-link { position: relative; white-space: nowrap; }
-        
-        /* 下拉菜单动画 */
         .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-        .dropdown-menu { 
-            opacity: 0; visibility: hidden; 
-            transform: translateY(10px); 
-            transition: all 0.3s ease; 
-        }
-
+        .dropdown-menu { opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; }
         .bento-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; overflow: hidden; }
-        
-        /* WhatsApp 动效 */
         .wa-float { animation: pulse-green 2s infinite; }
         @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); } 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); } }
     </style>
@@ -56,13 +28,10 @@
 
     <nav id="navbar" class="fixed top-0 w-full glass-nav z-[100]">
         <div class="max-w-[1400px] mx-auto px-4 py-3 md:py-5 flex flex-col md:flex-row items-center justify-between gap-2 md:gap-0">
-            
-            <a href="#" class="flex-shrink-0">
+            <a href="index.html" class="flex-shrink-0">
                 <img src="snap_logo.png" alt="SNAP" class="h-6 md:h-9 rounded">
             </a>
-
             <div class="flex gap-4 md:gap-12 lg:gap-16 text-gray-200 text-[10px] md:text-[13px] font-bold uppercase tracking-wider md:tracking-[0.15em] items-center">
-                
                 <div class="relative dropdown">
                     <a href="#" class="nav-link flex items-center gap-1 hover:text-white py-1">Services <i class="fa-solid fa-chevron-down text-[8px] opacity-50"></i></a>
                     <div class="dropdown-menu absolute top-full -left-6 md:left-0 pt-4 z-[110]">
@@ -76,12 +45,10 @@
                         </div>
                     </div>
                 </div>
-                
                 <a href="#events" class="nav-link hover:text-white py-1">Showcase</a>
-                <a href="#about" class="nav-link hover:text-white py-1">About Us</a>
+                <a href="about.html" class="nav-link hover:text-white py-1">About Us</a>
                 <a href="mailto:hellofunprint@gmail.com" class="nav-link hover:text-white py-1">Contact</a>
             </div>
-
             <div class="hidden md:block w-24 text-right">
                 <span class="text-[9px] text-white/30 tracking-tighter uppercase">Est. 2026</span>
             </div>
@@ -92,16 +59,13 @@
         <div class="inline-block px-3 py-1 border border-indigo-500/20 rounded-full text-indigo-400 text-[9px] md:text-[11px] font-bold mb-6 tracking-widest uppercase">
             AI Photography Excellence
         </div>
-        
         <h1 class="text-5xl md:text-9xl font-black tracking-tighter mb-4 leading-none uppercase">
             <span class="gold-gradient">Unleash The</span> <br>
             <span class="purple-gradient">Legend.</span>
         </h1>
-        
         <p class="text-indigo-300 text-[10px] md:text-sm font-bold tracking-[0.3em] md:tracking-[0.4em] uppercase mb-10 opacity-70">
             More than 100 templates & styles
         </p>
-
         <div class="bento-card max-w-5xl mx-auto relative group shadow-2xl shadow-indigo-500/10">
             <img id="main-template-img" src="akira drive.jpg" class="w-full aspect-[4/5] md:aspect-video object-cover transition duration-700">
             <div class="absolute bottom-4 left-4 md:bottom-6 md:left-6 text-left bg-black/70 backdrop-blur-md p-3 md:p-4 rounded-xl border border-white/10">
@@ -113,42 +77,63 @@
         </div>
     </section>
 
-    <section id="events" class="max-w-7xl mx-auto px-6 py-20 md:py-32">
-        <div class="text-center mb-12 md:mb-16">
-            <h2 class="text-indigo-400 font-bold tracking-widest uppercase text-[10px] mb-2">Showcase</h2>
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center mb-16">
+            <h2 class="text-indigo-400 font-bold tracking-widest uppercase text-[10px] mb-3">Infinite Styles</h2>
+            <h3 class="text-4xl md:text-6xl font-black italic gold-gradient">ONE PHOTO, INFINITE LEGENDS.</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="relative bento-card aspect-[4/5] group cursor-pointer overflow-hidden">
+                <img src="user-1.jpg" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 transition-all duration-700 group-hover:scale-110">
+                <img src="ai-1.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 group-hover:scale-110">
+                <div class="absolute bottom-6 left-6 z-10 transition-transform duration-500 group-hover:translate-y-[-5px]">
+                    <p class="text-[10px] font-bold text-indigo-400 tracking-widest uppercase mb-1">Style 01</p>
+                    <h4 class="text-2xl font-black text-white italic">CYBERPUNK</h4>
+                </div>
+            </div>
+            <div class="relative bento-card aspect-[4/5] group cursor-pointer overflow-hidden">
+                <img src="user-2.jpg" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 transition-all duration-700 group-hover:scale-110">
+                <img src="ai-2.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 group-hover:scale-110">
+                <div class="absolute bottom-6 left-6 z-10 transition-transform duration-500 group-hover:translate-y-[-5px]">
+                    <p class="text-[10px] font-bold text-indigo-400 tracking-widest uppercase mb-1">Style 02</p>
+                    <h4 class="text-2xl font-black text-white italic">ANIME VIBE</h4>
+                </div>
+            </div>
+            <div class="relative bento-card aspect-[4/5] group cursor-pointer overflow-hidden">
+                <img src="user-3.jpg" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 transition-all duration-700 group-hover:scale-110">
+                <img src="ai-3.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 group-hover:scale-110">
+                <div class="absolute bottom-6 left-6 z-10 transition-transform duration-500 group-hover:translate-y-[-5px]">
+                    <p class="text-[10px] font-bold text-indigo-400 tracking-widest uppercase mb-1">Style 03</p>
+                    <h4 class="text-2xl font-black text-white italic">ROYAL KNIGHT</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <h2 class="text-indigo-400 font-bold tracking-widest uppercase text-[10px] mb-2">Highlights</h2>
             <h3 class="text-3xl md:text-5xl font-bold">2026 MattLam CNY Event</h3>
         </div>
-
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             <div class="col-span-2 bento-card relative group">
                 <img src="mattlam final.jpg" class="w-full h-[300px] md:h-[540px] object-cover transition duration-700 group-hover:scale-105">
                 <div class="p-6 md:p-10 absolute bottom-0 bg-gradient-to-t from-black w-full text-left">
-                    <span class="bg-yellow-500 text-black text-[9px] font-black px-2 py-1 rounded mb-4 inline-block">FEATURED</span>
-                    <h4 class="text-xl md:text-3xl font-bold text-white">Matt Lam</h4>
+                    <span class="bg-yellow-500 text-black text-[9px] font-black px-2 py-1 rounded mb-4 inline-block tracking-tighter">FEATURED</span>
+                    <h4 class="text-xl md:text-3xl font-bold">Matt Lam</h4>
                 </div>
             </div>
             <div class="col-span-1 bento-card h-[180px] md:h-[258px]"><img src="lady chaishen.jpg" class="w-full h-full object-cover"></div>
             <div class="col-span-1 bento-card h-[180px] md:h-[258px]"><img src="man caishenye.jpg" class="w-full h-full object-cover"></div>
             <div class="col-span-1 bento-card h-[180px] md:h-[258px]"><img src="mattlam style girl.jpg" class="w-full h-full object-cover"></div>
             <div class="col-span-1 bento-card bg-indigo-900/40 flex flex-col items-center justify-center p-4 text-center h-[180px] md:h-[258px]">
-                <p class="font-bold text-sm md:text-xl leading-tight text-white">Elevating Events with AI</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="max-w-4xl mx-auto px-6 py-20">
-        <div class="glass-dropdown p-8 md:p-16 rounded-[2rem] md:rounded-[4rem] text-center border-white/5">
-            <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8 gold-gradient inline-block">THE SNAP STORY</h2>
-            <div class="text-gray-300 text-sm md:text-lg leading-relaxed space-y-4 md:space-y-6">
-                <p>Established in 2026, SNAP is at the forefront of experiential marketing, empowering brands through cutting-edge AI technology.</p>
-                <p>From Weddings to Corporate Galas, our bespoke AI Photobooths are tailored to deliver legendary memories.</p>
-                <a href="mailto:hellofunprint@gmail.com" class="inline-block mt-4 px-6 py-2 md:px-10 md:py-4 bg-white text-black font-black rounded-full text-[10px] md:text-xs uppercase tracking-widest">Contact Us</a>
+                <p class="font-bold text-sm md:text-xl leading-tight">Elevating Events with AI</p>
             </div>
         </div>
     </section>
 
     <a href="https://wa.me/6598631242" target="_blank" class="fixed bottom-6 right-6 z-[100] group">
-        <div class="wa-float glass-dropdown flex items-center gap-2 p-3 px-4 rounded-full bg-green-500/20 border-green-500/40 hover:bg-green-500 transition-all duration-300">
+        <div class="wa-float glass-dropdown flex items-center gap-2 p-3 px-4 rounded-full bg-green-500/10 border-green-500/40 hover:bg-green-500 transition-all duration-300">
             <i class="fa-brands fa-whatsapp text-xl md:text-2xl text-green-400"></i>
             <span class="text-white font-bold text-[10px] md:text-sm">WhatsApp</span>
         </div>
@@ -157,17 +142,12 @@
     <script>
         let lastScrollTop = 0;
         const navbar = document.getElementById('navbar');
-
         window.addEventListener('scroll', () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                navbar.classList.add('nav-hidden');
-            } else {
-                navbar.classList.remove('nav-hidden');
-            }
+            if (scrollTop > lastScrollTop && scrollTop > 100) { navbar.classList.add('nav-hidden'); } 
+            else { navbar.classList.remove('nav-hidden'); }
             lastScrollTop = scrollTop;
         });
-
         const templates = [
             { img: "akira drive.jpg", title: "Cyberpunk Vibe", subtitle: "Series 01" },
             { img: "astronaut man.jpg", title: "Space Explorer", subtitle: "Series 02" },
